@@ -1,6 +1,6 @@
-content,install,url,resource:/chrome/jabberxm/content/
-skin,install,url,resource:/chrome/jabberxm/skin/
-locale,install,url,resource:/chrome/jabberxm/locale/en-US/
-content,install,url,resource:/chrome/jabberzilla/content/
-skin,install,url,resource:/chrome/jabberzilla/skin/
-locale,install,url,resource:/chrome/jabberzilla/locale/en-US/
+content,install,url,jar:resource:/chrome/jabberxm.jar!/content/
+skin,install,url,jar:resource:/chrome/jabberxm.jar!/skin/
+locale,install,url,jar:resource:/chrome/jabberxm.jar!/locale/en-US/
+content,install,url,jar:resource:/chrome/jabberzilla.jar!/content/
+skin,install,url,jar:resource:/chrome/jabberzilla.jar!/skin/
+locale,install,url,jar:resource:/chrome/jabberzilla.jar!/locale/en-US/
