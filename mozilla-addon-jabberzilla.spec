@@ -1,5 +1,5 @@
 Summary:	Jabber client for Mozilla
-Summary(pl):	Klient jabbera dla Mozilli
+Summary(pl):	Klient Jabbera dla Mozilli
 Name:		mozilla-addon-jabberzilla
 %define		_realname	jabberzilla
 %define		_realname2	jabberxm
@@ -27,7 +27,7 @@ Jabber client for Mozilla. It can integrate with sidebar or work in
 separate window. It has module with conference calls support.
 
 %description -l pl
-Klient jabbera dla mozilli. Integruje siê z sidebarem lub dzia³a w
+Klient Jabbera dla mozilli. Integruje siê z sidebarem lub dzia³a w
 osobnym okienku. Zawiera modu³ rozmów konferencyjnych.
 
 %prep
