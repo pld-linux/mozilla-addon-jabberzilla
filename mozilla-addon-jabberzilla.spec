@@ -28,7 +28,7 @@ okienku. Zawiera modu³ rozmów konferencyjnych.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_chromedir}
 unzip %{SOURCE0} -d $RPM_BUILD_ROOT%{_chromedir}
-mv $RPM_BUILD_ROOT%{_chromedir}/components $RPM_BUILD_ROOT%{_libdir}
+mv $RPM_BUILD_ROOT%{_chromedir}/components $RPM_BUILD_ROOT%{_libdir}/mozilla
 rm $RPM_BUILD_ROOT%{_chromedir}/*.{txt,js}
 unzip %{SOURCE1} -d $RPM_BUILD_ROOT%{_chromedir}
 install %{SOURCE2} $RPM_BUILD_ROOT%{_chromedir}
@@ -50,5 +50,5 @@ rm -f installed-chrome.txt.tmp
 %defattr(644,root,root,755)
 %{_chromedir}/%{_realname}
 %{_chromedir}/jabberxm
-%{_libdir}/components
+%{_libdir}/mozilla/components
 %{_chromedir}/%{_realname}-installed-chrome.txt
