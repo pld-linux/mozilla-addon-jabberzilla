@@ -11,6 +11,7 @@ Source1:	http://jabberzilla.mozdev.org/releases/%{_realname}.xpi
 Source2:	%{_realname}-installed-chrome.txt
 URL:		http://jabberzilla.mozdev.org/
 BuildRequires:	unzip
+BuildArch:	noarch
 Requires:	mozilla >= 1.0-7
 BuildRoot:	%{tmpdir}/%{_realname}-%{version}-root-%(id -u -n)
 
@@ -37,16 +38,14 @@ rm -f $RPM_BUILD_ROOT%{_chromedir}/*.{txt,js}
 unzip %{SOURCE1} -d $RPM_BUILD_ROOT%{_chromedir}
 install %{SOURCE2} $RPM_BUILD_ROOT%{_chromedir}
 
-%clean
-rm -rf $RPM_BUILD_ROOT
-
 %post
-cd %{_chromedir}
-cat *-installed-chrome.txt >installed-chrome.txt
+cat %{_chromedir}/*-installed-chrome.txt >%{_chromedir}/installed-chrome.txt
 
 %postun
-cd %{_chromedir}
-cat *-installed-chrome.txt >installed-chrome.txt
+cat %{_chromedir}/*-installed-chrome.txt >%{_chromedir}/installed-chrome.txt
+
+%clean
+rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
