@@ -8,7 +8,9 @@ Release:	4
 License:	GPL
 Group:		X11/Applications/Networking
 Source0:	http://jabberzilla.mozdev.org/releases/%{_realname2}.xpi
+# Source0-md5:	dfeabd63d8f47802a276d68a8f2818d1
 Source1:	http://jabberzilla.mozdev.org/releases/%{_realname}.xpi
+# Source1-md5:	b5168995df0cddfc5c30c6a5b03e70b7
 Source2:	%{_realname}-installed-chrome.txt
 URL:		http://jabberzilla.mozdev.org/
 BuildRequires:	unzip
