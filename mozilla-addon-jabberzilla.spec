@@ -18,7 +18,7 @@ BuildRequires:	zip
 Requires(post,postun):	mozilla >= 1.7.3-3
 Requires(post,postun):	textutils
 Requires:	mozilla >= 1.0-7
-BuildRoot:	%{tmpdir}/%{_realname}-%{version}-root-%(id -u -n)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_chromedir	%{_datadir}/mozilla/chrome
 
