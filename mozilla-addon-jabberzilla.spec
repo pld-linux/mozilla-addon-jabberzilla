@@ -3,7 +3,7 @@ Summary(pl):	Klient jabbera dla Mozilli
 Name:		mozilla-addon-jabberzilla
 %define		_realname	jabberzilla
 Version:	0.3.6beta
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Applications/Networking
 Source0:	http://jabberzilla.mozdev.org/releases/jabberxm.xpi
@@ -51,5 +51,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %{_chromedir}/%{_realname}
 %{_chromedir}/jabberxm
-%{_libdir}/mozilla/components
+%{_libdir}/mozilla/components/*
 %{_chromedir}/%{_realname}-installed-chrome.txt
