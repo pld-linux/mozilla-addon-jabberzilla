@@ -4,7 +4,7 @@ Name:		mozilla-addon-jabberzilla
 %define		_realname	jabberzilla
 %define		_realname2	jabberxm
 Version:	0.3.6beta
-Release:	4
+Release:	5
 License:	GPL
 Group:		X11/Applications/Networking
 Source0:	http://jabberzilla.mozdev.org/releases/%{_realname2}.xpi
@@ -17,10 +17,9 @@ BuildRequires:	unzip
 BuildRequires:	zip
 Requires(post,postun):	textutils
 Requires:	mozilla >= 1.0-7
-BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{_realname}-%{version}-root-%(id -u -n)
 
-%define		_chromedir	%{_libdir}/mozilla/chrome
+%define		_chromedir	%{_datadir}/mozilla/chrome
 
 %description
 Jabber client for Mozilla. It can integrate with sidebar or work in
@@ -34,7 +33,7 @@ osobnym okienku. Zawiera modu³ rozmów konferencyjnych.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_chromedir}
+install -d $RPM_BUILD_ROOT{%{_chromedir},%{_libdir}/mozilla}
 
 unzip -o %{SOURCE0} -d  $RPM_BUILD_ROOT%{_chromedir}
 unzip -o %{SOURCE1} -d  $RPM_BUILD_ROOT%{_chromedir}
