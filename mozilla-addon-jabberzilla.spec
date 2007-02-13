@@ -1,5 +1,5 @@
 Summary:	Jabber client for Mozilla
-Summary(pl.UTF-8):   Klient Jabbera dla Mozilli
+Summary(pl.UTF-8):	Klient Jabbera dla Mozilli
 Name:		mozilla-addon-jabberzilla
 %define		_realname	jabberzilla
 %define		_realname2	jabberxm
