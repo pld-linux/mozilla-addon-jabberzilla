@@ -1,8 +1,8 @@
+%define		_realname	jabberzilla
+%define		_realname2	jabberxm
 Summary:	Jabber client for Mozilla
 Summary(pl.UTF-8):	Klient Jabbera dla Mozilli
 Name:		mozilla-addon-jabberzilla
-%define		_realname	jabberzilla
-%define		_realname2	jabberxm
 Version:	0.3.6beta
 Release:	6
 License:	GPL
@@ -51,10 +51,12 @@ install %{SOURCE2} $RPM_BUILD_ROOT%{_chromedir}
 rm -rf $RPM_BUILD_ROOT
 
 %post
-%{_sbindir}/mozilla-chrome+xpcom-generate
+if [ "$1" = 1 ]; then
+	%{_sbindir}/mozilla-chrome+xpcom-generate
+fi
 
 %postun
-%{_sbindir}/mozilla-chrome+xpcom-generate
+[ ! -x %{_sbindir}/mozilla-chrome+xpcom-generate ] || %{_sbindir}/mozilla-chrome+xpcom-generate
 
 %files
 %defattr(644,root,root,755)
